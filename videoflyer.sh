@@ -1,5 +1,5 @@
 #
-# A simple bash script to make a 15 second video flyer for sharing on social media.
+# A simple bash script to make a 15-second video event flyer from JPEGs, for sharing on social media.
 #
 # Notes:
 #   - ffmpeg and ImageMagick required
@@ -22,7 +22,7 @@ ffmpeg -i artist1.jpg -filter_complex "zoompan=z='zoom+0.001':d=4*30:s=1080x1920
 ffmpeg -i artist2.jpg -filter_complex "zoompan=z='zoom+0.001':d=4*30:s=1080x1920" -r 30 -t 4 -pix_fmt yuv420p -c:v libx264 artist2.mp4
 ffmpeg -i artist3.jpg -filter_complex "zoompan=z='zoom+0.001':d=4*30:s=1080x1920" -r 30 -t 4 -pix_fmt yuv420p -c:v libx264 artist3.mp4
 
-# create 15-second video
+# combine the above into a 15-second video with various transitions
 
 ffmpeg \
 -i flyer-2s.mp4 \
@@ -36,6 +36,8 @@ ffmpeg \
 [f1][3]xfade=transition=smoothright:duration=0.5:offset=8.5[f2]; \
 [f2][4]xfade=transition=hblur:duration=0.5:offset=11[f3]" \
 -map "[f3]" -r 30 -pix_fmt yuv420p -vcodec libx264 output-swipe-custom.mp4
+
+# delete extra files
 
 rm flyer-2s.mp4
 rm flyer-4s.mp4
