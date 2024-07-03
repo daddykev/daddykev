@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @daddykev
 - 👀 I’m interested in coding.
-- 🌱 I’m currently learning Vue.js
+- 🌱 I’m currently learning Next.js
 - 📫 How to reach me: IG @daddykev
 
 <!---
