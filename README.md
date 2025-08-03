@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @daddykev
 - 👀 I’m interested in coding.
-- 🌱 I’m currently learning Next.js
+- 🌱 I’m currently learning NeuralProphet
 - 📫 How to reach me: IG @daddykev
 
 <!---
